@@ -19,14 +19,24 @@ public class Task5 {
     public int evenNumbers (int [] a){
         int count = 0;
 
-        for (int i = 0; i < a.length; i++) {
-            if(a[i] % 2 == 0){
+        for (int j : a) {
+            if (j % 2 == 0) {
                 count++;
             }
         }
         return count;
     }
 
+    public void arrayOfEvenNumbers (int [] a, int [] b){
+        int j = 0;
+
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] % 2 == 0) {
+                b[j] = a[i];
+                j++;
+            }
+        }
+    }
 
     public static void main(String[] args) {
         Task5 obj = new Task5();
@@ -54,14 +64,7 @@ public class Task5 {
 
         int [] arrayOfEvenNumbers = new int[obj.evenNumbers(arrayOfNumbers)];
 
-        int j = 0;
-
-        for (int i = 0; i < arrayOfNumbers.length; i++) {
-            if (arrayOfNumbers[i] % 2 == 0) {
-                arrayOfEvenNumbers[j] = arrayOfNumbers[i];
-                j++;
-            }
-        }
+        obj.arrayOfEvenNumbers(arrayOfNumbers,arrayOfEvenNumbers);
         obj.displayArray(arrayOfEvenNumbers);
     }
 }

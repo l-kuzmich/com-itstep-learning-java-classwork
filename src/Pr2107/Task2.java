@@ -11,6 +11,7 @@ public class Task2 {
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + " ");
         }
+        System.out.println();
     }
 
     public void maxNumberOfArray (int [] a){
@@ -29,6 +30,7 @@ public class Task2 {
         }
         System.out.println("Max = " + max);
         System.out.println("Index of max = " + indexOfMax);
+        System.out.println();
     }
 
 
@@ -43,14 +45,11 @@ public class Task2 {
         }
 
         obj.displayArray(arrayOfNumbers);
-        System.out.println();
         obj.maxNumberOfArray(arrayOfNumbers);
-        System.out.println();
 
 
         int [] ar = {1, 5, 3, 2, 6, 4, 6, 3, 3, 6};
         obj.displayArray(ar);
-        System.out.println();
         obj.maxNumberOfArray(ar);
     }
 }
